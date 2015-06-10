@@ -1,4 +1,4 @@
-### RayTracing
-#### Upe - Caruaru
+#### Ray Tracing
+##### Upe - Caruaru
 
-Ray Tracing with KD-tree
+Ray tracing with KD-tree
