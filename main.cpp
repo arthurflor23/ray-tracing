@@ -8,7 +8,7 @@
  */
 
 #include <cstdlib>
-#include "raytracing/RayTracing.hpp"
+#include "raytracing/headers/RayTracing.hpp"
 
 int main() { 
     

@@ -1,5 +1,5 @@
 
-#include "RayTracing.hpp"
+#include "headers/RayTracing.hpp"
 #include <vector>
 #include <cstdlib>
 #include <string>

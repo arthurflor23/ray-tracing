@@ -1,6 +1,6 @@
 
-#include "Box.hpp"
-#include "Ray.hpp"
+#include "headers/Box.hpp"
+#include "headers/Ray.hpp"
 
 bool Box::intersect(vector <vec> &bounds, Ray &r) {
     
