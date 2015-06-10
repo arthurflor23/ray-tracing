@@ -1,8 +1,8 @@
 
-#include "box.hpp"
-#include "raytracer/ray.hpp"
+#include "Box.hpp"
+#include "Ray.hpp"
 
-bool Box::intersect(Ray &r) {
+bool Box::intersect(vector <vec> &bounds, Ray &r) {
     
     double tmin, tmax, tymin, tymax, tzmin, tzmax;
 

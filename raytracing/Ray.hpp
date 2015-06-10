@@ -1,5 +1,7 @@
 
 #include <armadillo>
+#ifndef RAY_HPP
+#define	RAY_HPP
 
 using namespace arma;
 
@@ -11,6 +13,8 @@ private:
     int sign[3];    
     
 public:
+    Ray();
+    
     Ray(vec origem, vec d){
         
 	this->origem = origem;
@@ -63,14 +67,16 @@ public:
         return origem;
     }
 
-    void SetSign(int* sign) {
-        this->sign = sign;
+    void SetSign(int sign[3]) {
+        this->sign[0] = sign[0];
+        this->sign[1] = sign[1];
+        this->sign[2] = sign[2];
     }
 
-    int* GetSign() const {
+    int* GetSign() {
         return sign;
     }
-    
-    void int aloka ();
 
 };
+
+#endif	/* RAY_HPP */
