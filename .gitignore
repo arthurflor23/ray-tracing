@@ -2,5 +2,10 @@
 /nbproject/private/
 /dist/
 /nbproject/
+
+
 /example
 /Makefile
+
+
+/.dep.inc
