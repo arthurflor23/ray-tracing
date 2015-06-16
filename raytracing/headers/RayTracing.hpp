@@ -5,12 +5,12 @@
 
 using namespace std;
 
-class RayTracing {
+class RayTracing{
     
 public:
     RayTracing();
     
-    static int inicio(string config, string saida);
+    static void inicio(string config, string saida);
 
 };
 

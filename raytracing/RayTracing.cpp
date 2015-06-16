@@ -1,22 +1,27 @@
 
 #include "headers/RayTracing.hpp"
+#include "headers/Object.hpp"
+#include "headers/Ambient.hpp"
+#include "headers/Light.hpp"
 #include <vector>
 #include <cstdlib>
+#include <armadillo>
 #include <string>
 #include <iostream>
 
+using namespace arma;
 using namespace std;
 
-int RayTracing::inicio(string config, string saida) {
+void RayTracing::inicio(string config, string saida) {
     
     cout << config << endl << saida << endl;
 
 //    NoArvore * No = NULL;  
-//    vector<Object *> objetos = NULL;
-//    vector<Light> luz;
+    vector<Object *> objetos;
+    vector<Light> luz;
 //    NVertex normal_boladona;
-//    Ambient ambiente;
-//    mat keye;
+    Ambient ambiente;
+    mat keye;
 //    int cont_tri=0;
 //    unsigned int porc;
 //    
@@ -39,7 +44,7 @@ int RayTracing::inicio(string config, string saida) {
 //    cout << "Triângulo: " << cont_tri << endl;
 //    cout << "Esfera: " << objetos.size()-cont_tri << endl;
     
-    return 0;
+    
 }
 
 
