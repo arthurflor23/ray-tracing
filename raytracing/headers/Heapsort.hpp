@@ -11,7 +11,7 @@ class Heapsort {
     
 public:
     Heapsort();
-    vector<Object*> heapsort(vector <Object *> &objetos, int n, int eixo);
+    static vector<Object*> heapsort(vector <Object *> &objetos, int n, int eixo);
 
 };
 
