@@ -13,6 +13,8 @@
 #include "Ambient.hpp"
 #include "Light.hpp"
 #include "Hittable.hpp"
+#include "Box.hpp"
+#include "Object.hpp"
 
 using namespace arma;
 using namespace std;

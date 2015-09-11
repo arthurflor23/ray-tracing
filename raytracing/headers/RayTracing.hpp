@@ -10,7 +10,7 @@ class RayTracing{
 public:
     RayTracing();
     
-    static void inicio(string config, string saida);
+    static void inicio(const char *config, const char *saida);
 
 };
 

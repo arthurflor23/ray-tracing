@@ -15,7 +15,7 @@ private:
     vec A, B, C, baricentro;
     
 public:
-    Triangle();
+    
     Triangle(vec triangulo);
 
     bool colide(const vec &d, double &T, const vec &origem);

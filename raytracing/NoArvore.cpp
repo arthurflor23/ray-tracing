@@ -5,7 +5,6 @@
  * Created on 11 de Setembro de 2015, 09:30
  */
 
-#include "NoArvore.hpp"
 #include "headers/NoArvore.hpp"
 #include "headers/Heapsort.hpp"
 #include "headers/Box.hpp"
@@ -66,7 +65,7 @@ static NoArvore * construirArvore(vector <Object *> &objetos, unsigned int &porc
       
     for (unsigned int w=0;w<objetos.size();w++)
     {
-	if ((objetos[w]->getMin()(No->getEixo()) <= No->getSplit) && (objetos[w]->getMax()(No->getEixo()) <= No->getSplit())){
+	if ((objetos[w]->getMin()(No->getEixo()) <= No->getSplit()) && (objetos[w]->getMax()(No->getEixo()) <= No->getSplit())){
 	    esq.push_back(objetos[w]);
 	}
         
@@ -97,8 +96,8 @@ static NoArvore * percorrerArvore(NoArvore * &No, Ray &r, bool &colide, double &
       if (!Folha(NoAtual)){
           
 	  Ray r0=r, r1=r;
-	  bool intersecta0 = NoAtual->getEsq->getBounds().intersect(r0);
-	  bool intersecta1 = NoAtual->getDir->getBounds().intersect(r1);
+	  bool intersecta0 = Box::intersect(r0); //NoAtual->getEsq()->getBounds().intersect(r0);
+	  bool intersecta1 = Box::intersect(r1); //NoAtual->getDir()->getBounds().intersect(r1);
 	  
 	  if (intersecta0 && intersecta1){
           
@@ -132,8 +131,7 @@ static NoArvore * percorrerArvore(NoArvore * &No, Ray &r, bool &colide, double &
                 if (nivelDaPilha!=-1){
                     NoAtual=pilha[nivelDaPilha];
                     pilha.resize(nivelDaPilha);
-		}
-		    
+		}    
             }
 	}  
     }

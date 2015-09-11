@@ -8,10 +8,7 @@
 using namespace arma;
 using namespace std;
 
-Triangle::Triangle() {
-}
-
-Triangle::Triangle (vec triangulo){
+Triangle (vec triangulo){
     
     mat transf;
     vec kd, ks;
@@ -21,33 +18,33 @@ Triangle::Triangle (vec triangulo){
            << triangulo(24) << triangulo(25) << triangulo(26) << triangulo(27) << endr
            << 0 << 0 << 0 << 1;
 
-    setTransf(transf);
+    Triangle.setTransf(transf);
     
-    this->A << triangulo(0) << triangulo(1) << triangulo(2) << 1;
-    this->A = transf * A;
-    this->A.shed_row(3);
+    Triangle.setA() << triangulo(0) << triangulo(1) << triangulo(2) << 1;
+    Triangle.setA() = transf * Triangle.getA();
+    Triangle.setA() = Triangle.getA().shed_row(3);
 	
-    this->B << triangulo(3) << triangulo(4) << triangulo(5) << 1;
-    this->B = transf * B;
-    this->B.shed_row(3);
+    Triangle.setB() << triangulo(3) << triangulo(4) << triangulo(5) << 1;
+    Triangle.setB() = transf * Triangle.getB;
+    Triangle.setB() = Triangle.getB().shed_row(3);
 	
-    this->C << triangulo(6) << triangulo(7) << triangulo(8) << 1;
-    this->C = transf * C;
-    this->C.shed_row(3);
+    Triangle.setC() << triangulo(6) << triangulo(7) << triangulo(8) << 1;
+    Triangle.setC() = transf * Triangle.getC();
+    Triangle.setC() = Triangle.getC().shed_row(3);
 	
     kd << triangulo(9) << triangulo(10) << triangulo(11);
     ks << triangulo(12) << triangulo(13) << triangulo(14);
     
-    setKd(kd);
-    setKs(ks);
+    Triangle.setKd(kd);
+    Triangle.setKs(ks);
         
-    setP(triangulo(15));
+    Triangle.setP(triangulo(15));
     
-    setTipo(1);
+    Triangle.setTipo(1);
 	
-    this->baricentro = (this->A + this->B + this->C)/3;
+    Triangle.setBaricentro = (Triangle.getA + Triangle.getB + Triangle.getC)/3;
     
-    setNormal(cross(this->B - this->A, this->C - this->A));
+    Triangle.setNormal(cross(Triangle.getB - Triangle.getA, Triangle.getC - Triangle.getA));
 }
 
 bool Triangle::colide(const vec &d, double &T, const vec &origem){

@@ -3,6 +3,7 @@
 #include "headers/Object.hpp"
 #include "headers/Ambient.hpp"
 #include "headers/Light.hpp"
+#include "headers/Read.hpp"
 #include <vector>
 #include <cstdlib>
 #include <armadillo>
@@ -12,7 +13,7 @@
 using namespace arma;
 using namespace std;
 
-void RayTracing::inicio(string config, string saida) {
+void RayTracing::inicio(const char *config, const char *saida) {
     
     cout << config << endl << saida << endl;
 
@@ -22,16 +23,16 @@ void RayTracing::inicio(string config, string saida) {
 //    NVertex normal_boladona;
     Ambient ambiente;
     mat keye;
-//    int cont_tri=0;
+    int cont_tri=0;
 //    unsigned int porc;
-//    
-//    Read(config, objetos, luz, ambiente, keye, cont_tri);
-//
+   
+    Read::leitura(config, objetos, luz, ambiente, keye, cont_tri);
+
 //    if (objetos.size() == 0){
 //        cout << "Nenhum objeto encontrado" << endl; 
 //        return 1; 
 //    }
-//
+
 //    else{
 //        if (objetos.size() >= 100) porc=objetos.size() * 0.003;
 //        else porc=5;
