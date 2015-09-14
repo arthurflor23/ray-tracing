@@ -1,8 +1,9 @@
 
 #include "headers/Box.hpp"
 #include "headers/Ray.hpp"
+#include "headers/NoArvore.hpp"
 
-bool Box::intersect(vector <vec> &bounds, Ray &r) {
+bool Box::intersect(Ray &r) {
     
     double tmin, tmax, tymin, tymax, tzmin, tzmax;
 

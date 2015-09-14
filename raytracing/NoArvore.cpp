@@ -96,8 +96,9 @@ static NoArvore * percorrerArvore(NoArvore * &No, Ray &r, bool &colide, double &
       if (!Folha(NoAtual)){
           
 	  Ray r0=r, r1=r;
-	  bool intersecta0 = Box::intersect(r0); //NoAtual->getEsq()->getBounds().intersect(r0);
-	  bool intersecta1 = Box::intersect(r1); //NoAtual->getDir()->getBounds().intersect(r1);
+          
+	  bool intersecta0 = NoAtual->getEsq()->getBounds().intersect(r0);
+	  bool intersecta1 = NoAtual->getDir()->getBounds().intersect(r1);
 	  
 	  if (intersecta0 && intersecta1){
           

@@ -10,7 +10,7 @@ using namespace std;
 
 class Box {
     
-private:
+public:
     vector <vec> bounds;
     
 public:
@@ -19,7 +19,7 @@ public:
     Box(vec min, vec max){
 	this->bounds.push_back(min);
 	this->bounds.push_back(max);
-      }
+    }
     
     vec getMin() { 
         return bounds[0]; 
@@ -29,7 +29,7 @@ public:
         return bounds[1]; 
     }
    
-    static bool intersect(vector <vec> &bounds, Ray &r);  
+    bool intersect(Ray &r);  
     
 };
 

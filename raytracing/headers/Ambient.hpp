@@ -16,10 +16,7 @@ public:
     
     Ambient();
     
-    Ambient(vec ka, double Ia){
-	this->ka = ka;
-	this->Ia = Ia;
-    }
+    Ambient(vec ka, double Ia);
 
     void SetIa(double Ia) {
         this->Ia = Ia;

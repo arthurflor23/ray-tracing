@@ -9,6 +9,7 @@
 #define	READ_HPP
 
 #include "Object.hpp"
+#include "Hittable.hpp"
 #include <vector>
 
 using namespace arma;

@@ -6,12 +6,11 @@
  */
 
 #include "headers/Write.hpp"
-#include "headers/NoArvore.hpp"
 
 using namespace arma;
 using namespace std;
 
-int Write(const char *txt, const vector<Light> luz, const mat keye, const Ambient ambiente, NoArvore * No){
+Write::Write(const char *txt, const vector<Light> luz, const mat keye, const Ambient ambiente, NoArvore * No){
     
   int resolucao[2];
   vector<Pixels *> pixel;
@@ -59,6 +58,6 @@ int Write(const char *txt, const vector<Light> luz, const mat keye, const Ambien
   }  
 
   arq.close();
-  return 0;
+
 }
 

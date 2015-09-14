@@ -6,8 +6,8 @@
  */
 
 #include "headers/Read.hpp"
+#include "headers/Hittable.hpp"
 #include "headers/Ambient.hpp"
-#include "headers/Object.hpp"
 #include "headers/Sphere.hpp"
 #include "headers/Triangle.hpp"
 #include <armadillo>
@@ -148,7 +148,7 @@ int Read::leitura(const char *txt, vector<Object *> &objetos, vector<Light> &luz
       aux2 = join_cols(aux2,aux1);
   }
   
-  ambiente.SetKa(aux2(0) << aux2(1) << aux2(2));
+  ambiente.SetKa(aux2); // aux2(0) << aux2(1) << aux2(2)
   ambiente.SetIa(aux2(3));
   aux2.reset();
   

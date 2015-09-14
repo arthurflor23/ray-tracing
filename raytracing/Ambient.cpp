@@ -4,5 +4,8 @@
 using namespace std;
 
 Ambient::Ambient() {
+    
+    this->ka = ka;
+    this->Ia = Ia;
 }
 

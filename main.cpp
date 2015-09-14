@@ -2,7 +2,7 @@
  * File:   main.cpp
  * Author: arthur
  * 
- * g++ -Wall -fopenmp main.cpp raytracing/RayTracing.cpp raytracing/Ambient.cpp raytracing/Read.cpp -O3 -o example -llapack -larmadillo && time ./example
+ * g++ -fopenmp main.cpp raytracing/*.cpp -O3 -o example -llapack -larmadillo && time ./example
  * 
  * Created on 9 de Junho de 2015, 21:35
  */
