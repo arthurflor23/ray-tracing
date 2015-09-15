@@ -20,11 +20,11 @@ public:
 
     bool colide(const vec &d, double &T, const vec &origem);
     
-    void setBaricentro(vec baricentro) {
+    void setCentro(vec baricentro) {
         this->baricentro = baricentro;
     }
 
-    vec getBaricentro() const {
+    vec getCentro() {
         return baricentro;
     }
 
@@ -32,7 +32,7 @@ public:
         this->C = C;
     }
 
-    vec getC() const {
+    vec getC() {
         return C;
     }
 
@@ -40,7 +40,7 @@ public:
         this->B = B;
     }
 
-    vec getB() const {
+    vec getB() {
         return B;
     }
 
@@ -48,7 +48,7 @@ public:
         this->A = A;
     }
 
-    vec getA() const {
+    vec getA() {
         return A;
     }
     

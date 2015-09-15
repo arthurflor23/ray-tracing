@@ -6,6 +6,9 @@
  */
 
 #include "headers/Write.hpp"
+#include "headers/NoArvore.hpp"
+#include "headers/Object.hpp"
+#include "headers/Triangle.hpp"
 
 using namespace arma;
 using namespace std;
@@ -42,7 +45,10 @@ Write::Write(const char *txt, const vector<Light> luz, const mat keye, const Amb
 	NoAtual = NoArvore::percorrerArvore(No, r, colide, Tmin, T, indice);
 	  
 	if (colide && luz.size()!=0){
-            pixel[j]->color(NoAtual->getObjetos()[indice]->cor(d*Tmin, luz, NoAtual->getObjetos(), ambiente, vetor, indice));
+            Object * aa;
+            aa = NoAtual->getObjetos()[indice];
+            aa->cor((d*Tmin), luz, NoAtual->getObjetos(), ambiente, vetor, indice);
+//            pixel[j]->color(NoAtual->getObjetos()[indice]->cor(d*Tmin, luz, NoAtual->getObjetos(), ambiente, vetor, indice));
 	}
           
 	else{ 

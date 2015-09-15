@@ -22,7 +22,7 @@ Triangle::Triangle (vec triangulo){
   
     aux << triangulo(0) << triangulo(1) << triangulo(2) << 1;
     aux = transf * aux;
-    aux.shed_col(3);
+    aux.shed_row(3);
      
     this->setA(aux);
 //    this->setA(triangulo(0) << triangulo(1) << triangulo(2) << 1);
@@ -31,7 +31,7 @@ Triangle::Triangle (vec triangulo){
 	
     aux << triangulo(3) << triangulo(4) << triangulo(5) << 1;
     aux = transf * aux;
-    aux.shed_col(3);
+    aux.shed_row(3);
      
     this->setB(aux);
     
@@ -41,7 +41,7 @@ Triangle::Triangle (vec triangulo){
 	
     aux << triangulo(6) << triangulo(7) << triangulo(8) << 1;
     aux = transf * aux;
-    aux.shed_col(3);
+    aux.shed_row(3);
      
     this->setC(aux);
     
@@ -59,7 +59,7 @@ Triangle::Triangle (vec triangulo){
     
     this->setTipo(1);
 	
-    this->setBaricentro((this->getA() + this->getB() + this->getC())/3);
+    this->setCentro((this->getA() + this->getB() + this->getC())/3);
     
     this->setNormal(cross(this->getB() - this->getA(), this->getC() - this->getA()));
 }

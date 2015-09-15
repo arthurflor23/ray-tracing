@@ -26,7 +26,7 @@ public:
         this->max = max;
     }
 
-    vec getMax() const {
+    vec getMax() {
         return max;
     }
 
@@ -34,7 +34,7 @@ public:
         this->min = min;
     }
 
-    vec getMin() const {
+    vec getMin()  {
         return min;
     }
 
@@ -42,7 +42,7 @@ public:
         this->centro = centro;
     }
 
-    vec getCentro() const {
+    vec getCentro() {
         return centro;
     }
 
@@ -50,7 +50,7 @@ public:
         this->raio = raio;
     }
 
-    double getRaio() const {
+    double getRaio(){
         return raio;
     }
 

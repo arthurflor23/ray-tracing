@@ -10,7 +10,7 @@ using namespace std;
 Object::Object() {
 }
 
-vec cor(const vec &d, const vector<Light> &luz, const vector<Object *> objetos, const Ambient ambiente, const vec &vetor, const unsigned int &indice){ 
+vec Object::cor(const vec &d, const vector<Light> &luz, const vector<Object *> objetos, const Ambient ambiente, const vec &vetor, const unsigned int &indice){ 
     
     vec Ca, Co, Cs, V, L, H, cor_final;
     double T2;
@@ -19,7 +19,7 @@ vec cor(const vec &d, const vector<Light> &luz, const vector<Object *> objetos, 
 	
     for (unsigned int i=0; i<luz.size(); i++){
         bool sombra=false;
-	   
+            
 	for (unsigned int j=0; j<objetos.size(); j++){
             
             if (j!=indice && objetos[j]->colide(d, T2, luz[i].GetPosicao())){

@@ -50,7 +50,7 @@ public:
         this->objetos = objetos;
     }
 
-    vector<Object*> getObjetos() const {
+    vector<Object*> getObjetos() {
         return objetos;
     }
 
@@ -58,7 +58,7 @@ public:
         this->split = split;
     }
 
-    double getSplit() const {
+    double getSplit() {
         return split;
     }
 
@@ -66,7 +66,7 @@ public:
         this->eixo = eixo;
     }
 
-    int getEixo() const {
+    int getEixo() {
         return eixo;
     }
 
@@ -74,7 +74,7 @@ public:
         this->dir = dir;
     }
 
-    NoArvore* getDir() const {
+    NoArvore* getDir() {
         return dir;
     }
 
@@ -82,7 +82,7 @@ public:
         this->esq = esq;
     }
 
-    NoArvore* getEsq() const {
+    NoArvore* getEsq() {
         return esq;
     }
 
@@ -90,7 +90,7 @@ public:
         this->bounds = bounds;
     }
 
-    Box getBounds() const {
+    Box getBounds() {
         return bounds;
     }
 };

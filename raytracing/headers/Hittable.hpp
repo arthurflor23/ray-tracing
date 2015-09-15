@@ -9,9 +9,9 @@ using namespace std;
 class Hittable{
     
 public:
-    virtual vec getMin(); 
-    virtual vec getMax();
-    virtual vec getCentro();
+    virtual vec getMin()=0; 
+    virtual vec getMax()=0;
+    virtual vec getCentro()=0;
     
 };
 

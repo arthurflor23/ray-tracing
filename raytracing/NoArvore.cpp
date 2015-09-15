@@ -15,7 +15,7 @@
 using namespace arma;
 using namespace std;
 
-static bool Folha(NoArvore * &No){
+bool NoArvore::Folha(NoArvore * &No){
     if (No->getEsq() == NULL && No->getDir() == NULL){
 	return true;
     }
@@ -85,7 +85,7 @@ static NoArvore * construirArvore(vector <Object *> &objetos, unsigned int &porc
 return No;
 }
 
-static NoArvore * percorrerArvore(NoArvore * &No, Ray &r, bool &colide, double &Tmin, double &T, int &indice){
+NoArvore * NoArvore::percorrerArvore(NoArvore * &No, Ray &r, bool &colide, double &Tmin, double &T, int &indice){
     
   NoArvore * NoAtual = No;
   vector <NoArvore *> pilha;
