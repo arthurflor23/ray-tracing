@@ -9,6 +9,7 @@
 
 #include <cstdlib>
 #include "raytracing/headers/RayTracing.hpp"
+#include "raytracing/headers/Reader.hpp"
 #include <iostream>
 #include <string>
 
@@ -23,7 +24,7 @@ int main(int argc, char *argv[]) {
 //    
 //    RayTracing::inicio(argv[1], argv[2]);
     
-    RayTracing::inicio("config.txt", "saida.ppm");
+    RayTracing::inicio("tools/config.txt", "tools/saida.ppm");
     
     return 0;
 }

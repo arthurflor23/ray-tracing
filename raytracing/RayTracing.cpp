@@ -3,13 +3,13 @@
 #include "headers/Object.hpp"
 #include "headers/Ambient.hpp"
 #include "headers/Light.hpp"
-#include "headers/Read.hpp"
+#include "headers/Reader.hpp"
 #include "headers/NoArvore.hpp"
 #include "headers/NVertex.hpp"
+#include "headers/Writer.hpp"
 #include <vector>
 #include <cstdlib>
 #include <armadillo>
-#include <string>
 #include <iostream>
 
 using namespace arma;
@@ -26,7 +26,7 @@ int RayTracing::inicio(const char *config, const char *saida) {
     int cont_tri=0;
     unsigned int porc;
    
-    Read::leitura(config, objetos, luz, ambiente, keye, cont_tri);
+    Reader(config, objetos, luz, ambiente, keye, cont_tri);
 
     if (objetos.size() == 0){
         cout << "Nenhum objeto encontrado" << endl; 
@@ -37,9 +37,9 @@ int RayTracing::inicio(const char *config, const char *saida) {
         if (objetos.size() >= 100) porc=objetos.size() * 0.003;
         else porc=5;
 
-//        normal_boladona.N(objetos, cont_tri);
-//        No = NoArvore::construirArvore(objetos, porc);
-//        Write(saida, luz, keye, ambiente, No); 
+        normal_boladona.N(objetos, cont_tri);
+        No = NoArvore::construirArvore(objetos, porc);
+        Writer(saida, luz, keye, ambiente, No); 
     }
 
     cout << "Triângulo: " << cont_tri << endl;

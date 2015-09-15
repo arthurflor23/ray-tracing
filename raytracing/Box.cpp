@@ -3,6 +3,8 @@
 #include "headers/Ray.hpp"
 #include "headers/NoArvore.hpp"
 
+Box::Box(){}
+
 bool Box::intersect(Ray &r) {
     
     double tmin, tmax, tymin, tymax, tzmin, tzmax;

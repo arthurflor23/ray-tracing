@@ -36,15 +36,14 @@ vec Object::cor(const vec &d, const vector<Light> &luz, const vector<Object *> o
             H = (L+V)/2;
             H = H / norm(H,2);
 		
-            if (objetos[ind]->getTipo() == 0){ 
+            if (this->getTipo() == 0){ 
                 
-                objetos[ind]->setNormal(d - objetos[ind]->getCentro());
-                objetos[ind]->setNormal(normalise(objetos[ind]->getNormal()));
-		
+                this->setNormal(d - this->getCentro());
+                this->setNormal(normalise(this->getNormal()));
             }
 		
-            Co = objetos[ind]->getKd() % luz[i].GetI() * max(0.0, dot(objetos[ind]->getNormal(), L));
-            Cs = objetos[ind]->getKs() % luz[i].GetI() * pow(max(0.0, dot(objetos[ind]->getNormal(), H)), objetos[ind]->getP());
+            Co = this->getKd() % luz[i].GetI() * max(0.0, dot(this->getNormal(), L));
+            Cs = this->getKs() % luz[i].GetI() * pow(max(0.0, dot(this->getNormal(), H)), this->getP());
             cor_final += Co + Cs;
 	} 
     }

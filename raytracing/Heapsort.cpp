@@ -10,7 +10,7 @@ using namespace std;
 Heapsort::Heapsort() {
 }
 
-static vector<Object*> heapsort(vector <Object *> &objetos, int n, int eixo){
+vector<Object*> Heapsort::heapsort(vector <Object *> &objetos, int n, int eixo){
     
     int i = (n/2)+1, pai, filho;
     Object * t;

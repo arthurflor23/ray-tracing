@@ -23,7 +23,7 @@ bool NoArvore::Folha(NoArvore * &No){
     return false;
 }
 
-static NoArvore * construirArvore(vector <Object *> &objetos, unsigned int &porc, int nivel){
+NoArvore * NoArvore::construirArvore(vector <Object *> &objetos, unsigned int &porc, int nivel){
     
   NoArvore * No = new NoArvore();
   vector<Object *> esq, dir;
