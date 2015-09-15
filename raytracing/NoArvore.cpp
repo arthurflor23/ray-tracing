@@ -105,7 +105,7 @@ NoArvore * NoArvore::percorrerArvore(NoArvore * &No, Ray &r, bool &colide, doubl
 	      if (r1.GetTmin() < r0.GetTmin()){
                   
                 pilha.push_back(NoAtual->getEsq());
-                NoAtual=NoAtual->getDir();  
+                NoAtual=NoAtual->getDir();
               }
 		
 	      else{
@@ -150,14 +150,17 @@ NoArvore * NoArvore::percorrerArvore(NoArvore * &No, Ray &r, bool &colide, doubl
             }
 	}
 	    
-	if (colide==true) return NoAtual;
-	
-	  nivelDaPilha--;
-	  
-          if (nivelDaPilha!=-1){    
-	      NoAtual=pilha[nivelDaPilha];
-	      pilha.resize(nivelDaPilha);
-	    }
+            if (colide) 
+                return NoAtual;
+
+            else{
+                nivelDaPilha--;
+
+                if (nivelDaPilha!=-1){    
+                    NoAtual=pilha[nivelDaPilha];
+                    pilha.resize(nivelDaPilha);
+                }
+            }
 	}
     }
   
