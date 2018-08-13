@@ -6,5 +6,5 @@ and the output is a exemple.ppm image file.
 
 Requirements: armadillo, llapack, lblas
 
-####Result:
+#### Result
 ![Alt text](tools/deadpool.png?raw=true "Deadpool")
